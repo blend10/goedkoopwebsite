@@ -124,7 +124,7 @@ export default function ProjectenPage() {
   return (
     <main className=" bg-transparent">
       {/* Hero + filter (with absolute background image behind header) */}
-      <section className="relative pt-36 pb-12 px-8">
+      <section className="relative pt-36 pb-12 px-4 sm:px-8">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 -z-10"
@@ -138,13 +138,13 @@ export default function ProjectenPage() {
             className="object-cover"
           />
         </div>
-        <div className="max-w-300 mx-auto w-full flex items-start justify-between gap-16">
-          <h1 className="text-[55px] font-medium text-[#141721] leading-tight max-w-xl">
+        <div className="max-w-300 mx-auto w-full flex flex-col lg:flex-row lg:items-start lg:justify-between lg:gap-16 gap-6">
+          <h1 className="text-[36px] sm:text-[45px] lg:text-[55px] font-medium text-[#141721] leading-tight max-w-xl">
             Gemaakt met
             <br />
             WebStudio Nederland
           </h1>
-          <p className="text-[15px] text-[#555] leading-relaxed max-w-sm pt-3">
+          <p className="text-[15px] text-[#555] leading-relaxed max-w-sm lg:pt-3">
             Wij bouwen websites die merken vooruit helpen. Sterk design, hoge
             kwaliteit en altijd maatwerk dat past bij jouw verhaal. Websites met
             karakter. Bedrijven die dachten dat het maanden zou duren, stonden
@@ -155,10 +155,10 @@ export default function ProjectenPage() {
         {/* Filter bar */}
         <div
           ref={menuRef}
-          className="max-w-300 mx-auto w-full mt-12 flex items-center gap-3"
+          className="max-w-300 mx-auto w-full mt-12 flex flex-wrap items-center gap-3"
         >
           {/* Search pill */}
-          <div className="relative w-72">
+          <div className="relative w-full sm:w-72">
             <svg
               className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
               width="16"
@@ -292,7 +292,7 @@ export default function ProjectenPage() {
         </div>
 
         {/* Grid */}
-        <section className="px-8 py-12">
+        <section className="px-4 sm:px-8 py-12">
           <div className="max-w-300 mx-auto w-full">
             {filtered.length === 0 ? (
               <p className="text-center text-gray-400 py-24 text-[16px]">
@@ -300,7 +300,7 @@ export default function ProjectenPage() {
               </p>
             ) : (
               <>
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {shown.map((project, i) => (
                     <div
                       key={i}

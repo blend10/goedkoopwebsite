@@ -54,7 +54,7 @@ const FeaturesSection = () => {
         </h2>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Card 1 */}
           <div className="grid-cols-2 bg-white rounded-2xl p-6 flex flex-col gap-5 justify-between">
             <div className="flex flex-row items-start justify-start gap-3">
@@ -80,7 +80,7 @@ const FeaturesSection = () => {
 
             {/* Comparison rows */}
             <div className="mt-6 sm:mt-auto space-y-2">
-              <div className="flex flex-row w-full gap-4 sm:gap-12 items-center">
+              <div className="flex flex-row w-full gap-4 items-center">
                 <div className="flex items-center gap-2 text-[13px] text-[#9CA3AF]">
                   <Image
                     src="/images/icon12.svg"
@@ -97,8 +97,8 @@ const FeaturesSection = () => {
                 </div>
               </div>
 
-              <div className="flex flex-row items-center w-full gap-2">
-                <div className="flex items-center gap-2">
+              <div className="flex flex-row items-center w-full gap-4">
+                <div className="flex items-center gap-2 shrink-0">
                   <Image
                     src="/images/webstudio.svg"
                     alt="Check mark"
@@ -106,13 +106,12 @@ const FeaturesSection = () => {
                     height={20}
                     className="text-white"
                   />
-
                   <span className="text-[13px] font-semibold text-[#03030F]">
                     WebStudio
                   </span>
                 </div>
-                <div className="flex items-center justify-between bg-gradient-to-r from-black to-[#8715AD] border border-gray-100 rounded-r-xl px-4 py-3">
-                  <span className="text-white text-[14px] font-medium px-3 py-0.2 rounded-full">
+                <div className="flex items-center bg-linear-to-r from-black to-[#8715AD] border border-gray-100 rounded-r-xl px-4 py-3 w-full">
+                  <span className="text-white text-[14px] font-medium rounded-full">
                     aanzienlijk goedkoper
                   </span>
                 </div>

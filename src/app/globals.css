@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@utility container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Testimonials marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes map-ping {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(2); opacity: 0.3; }
+}
+
+@keyframes map-glow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+  50%       { transform: translate(-50%, -50%) scale(3); opacity: 0.25; }
+}
+
+.solution-marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.solution-marquee-track {
+  animation: marquee linear infinite;
+}
+
+.animate-map-ping {
+  animation: map-ping 2s ease-in-out infinite;
+}
+
+.animate-map-glow {
+  animation: map-glow 2s ease-in-out infinite;
+}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const CALENDLY_URL = "https://calendly.com/your-link/30min";
+const CALENDLY_URL = "https://calendly.com/goedkoopwebsite-info/30min";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -57,7 +57,7 @@ const Footer = () => {
             {/* Mockup image */}
             <div className="relative w-70 h-70 sm:w-70 sm:h-60 shrink-0">
               <Image
-                src="/images/active2.png"
+                src="/images/group.png"
                 alt="Website mockup"
                 width={270}
                 height={300}
@@ -74,7 +74,9 @@ const Footer = () => {
               </p>
               <div className="flex items-center gap-5 justify-center md:justify-start">
                 <a
-                  href="#"
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="text-[#9ca3af] hover:text-white transition-colors"
                 >
@@ -100,7 +102,9 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.x.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="X"
                   className="text-[#9ca3af] hover:text-white transition-colors"
                 >
@@ -172,26 +176,14 @@ const Footer = () => {
                     Contact opnemen
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/privacy"
-                    className="text-white/80 text-[15px] hover:text-white transition-colors"
-                  >
-                    Privacybeleid
-                  </Link>
+                <li className="text-white/80 text-[15px] hover:text-white transition-colors">
+                  Privacybeleid
                 </li>
-                <li>
-                  <Link
-                    href="/voorwaarden"
-                    className="text-white/80 text-[15px] hover:text-white transition-colors"
-                  >
-                    Algemene voorwaarden
-                  </Link>
+                <li className="text-white/80 text-[15px] hover:text-white transition-colors">
+                  Algemene voorwaarden
                 </li>
-                <li>
-                  <span className="text-transparent text-[15px] select-none pointer-events-none">
-                    Algemene voorwaarden
-                  </span>
+                <li className="text-transparent text-[15px] select-none pointer-events-none">
+                  Algemene voorwaarden
                 </li>
               </ul>
             </div>

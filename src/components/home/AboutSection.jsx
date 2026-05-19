@@ -5,19 +5,54 @@ import ScrollReveal from "@/components/general/ScrollReveal";
 
 const AboutSection = () => {
   const avatars = [
-    { src: "/images/6.png", pos: "top-2 left-12 lg:left-16", size: "w-20 h-20 lg:w-24 lg:h-24", dur: "4s", del: "0s" },
-    { src: "/images/7.png", pos: "top-0 right-12 lg:right-16", size: "w-16 h-16 lg:w-20 lg:h-20", dur: "4.5s", del: "0.6s" },
-    { src: "/images/8.png", pos: "top-24 right-6 lg:right-8", size: "w-12 h-12 lg:w-16 lg:h-16", dur: "3.8s", del: "1.2s" },
-    { src: "/images/9.png", pos: "bottom-4 left-6 lg:left-8", size: "w-16 h-16 lg:w-20 lg:h-20", dur: "5s", del: "0.3s" },
-    { src: "/images/10.png", pos: "bottom-4 right-12 lg:right-16", size: "w-16 h-16 lg:w-20 lg:h-20", dur: "4.2s", del: "0.9s" },
+    {
+      src: "/images/6.png",
+      pos: "top-2 left-12 lg:left-16",
+      size: "w-20 h-20 lg:w-24 lg:h-24",
+      dur: "4s",
+      del: "0s",
+    },
+    {
+      src: "/images/7.png",
+      pos: "top-0 right-12 lg:right-16",
+      size: "w-16 h-16 lg:w-20 lg:h-20",
+      dur: "4.5s",
+      del: "0.6s",
+    },
+    {
+      src: "/images/8.png",
+      pos: "top-24 right-6 lg:right-8",
+      size: "w-12 h-12 lg:w-16 lg:h-16",
+      dur: "3.8s",
+      del: "1.2s",
+    },
+    {
+      src: "/images/9.png",
+      pos: "bottom-4 left-6 lg:left-8",
+      size: "w-16 h-16 lg:w-20 lg:h-20",
+      dur: "5s",
+      del: "0.3s",
+    },
+    {
+      src: "/images/10.png",
+      pos: "bottom-4 right-12 lg:right-16",
+      size: "w-16 h-16 lg:w-20 lg:h-20",
+      dur: "4.2s",
+      del: "0.9s",
+    },
   ];
 
   return (
     <section className="bg-[#f5f5f5] py-12 lg:py-24">
       <style jsx>{`
         @keyframes bubble {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
         }
       `}</style>
 
@@ -30,7 +65,11 @@ const AboutSection = () => {
               10+
             </span>
           </ScrollReveal>
-          <ScrollReveal effect="fade-up" delay={500} className="absolute bottom-8 lg:bottom-8">
+          <ScrollReveal
+            effect="fade-up"
+            delay={500}
+            className="absolute bottom-8 lg:bottom-8"
+          >
             <span className="text-[14px] lg:text-[15px] font-medium text-[#424242]">
               Jaren ervaring
             </span>
@@ -88,7 +127,7 @@ const AboutSection = () => {
           </ScrollReveal>
 
           <ScrollReveal effect="fade-up" delay={650}>
-            <button className="bg-[#141721] text-white px-6 py-3 rounded-[10px] hover:bg-black/80 hover:-translate-y-0.5 hover:shadow-lg mt-6 lg:mt-10 transition-all duration-300 font-medium">
+            <button onClick={() => document.getElementById('prijzen')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#141721] text-white px-6 py-3 rounded-[10px] hover:bg-black/80 hover:-translate-y-0.5 hover:shadow-lg mt-6 lg:mt-10 transition-all duration-300 font-medium">
               Bekijk pakketten
             </button>
           </ScrollReveal>

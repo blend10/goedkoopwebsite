@@ -5,38 +5,38 @@ import { useEffect, useRef, useState } from "react";
 const testimonials = [
   {
     quote:
-      "The team at WebStudio truly understands what reliability means. Our team site never slows down.",
-    name: "Amira K.",
-    role: "Operations Lead",
+      "“Eerlijk gezegd verwachtten we een simpele, goedkope site, maar we kregen iets dat veel professioneler oogt dan bij bureaus waar we eerder mee hebben gewerkt.”",
+    name: "Maaike van Loon",
+    role: "Eigenaresse, Studio Linde",
     avatar: "https://i.pravatar.cc/44?img=47",
   },
   {
     quote:
-      "Incredible experience! WebStudio didn't just improve our website—they gave us peace of mind. Super reliable and always responsive.",
-    name: "Ryan T.",
-    role: "Digital Agency Owner",
+      "“Eerlijk gezegd verwachtten we een simpele, goedkope site, maar we kregen iets dat er veel professioneler uitziet dan bij bureaus waar we eerder mee hebben gewerkt.”",
+    name: "Maaike van Loon",
+    role: "Eigenaresse, Studio Linde",
     avatar: "https://i.pravatar.cc/44?img=11",
   },
   {
     quote:
-      "WebStudio completely transformed our website performance. Uptime has been flawless, and support is always quick and helpful.",
-    name: "Lena M.",
-    role: "E-commerce Founder",
+      "“Het grootste verschil was de snelheid. Binnen een week stonden we live en de communicatie was van begin tot eind helder.”",
+    name: "Jeroen van Dijk",
+    role: "Directeur, Van Dijk Elektrotechniek",
     avatar: "https://i.pravatar.cc/44?img=32",
   },
   {
     quote:
-      "Switching to WebStudio was the best decision for our business. Our site loads faster, and we've seen a noticeable increase.",
-    name: "James R.",
-    role: "SaaS Product Manager",
+      "“Duidelijke prijs, geen gedoe, en eindelijk een website waar ik trots op ben om klanten naartoe te sturen.”",
+    name: "Sanne Vermeer",
+    role: "Coach, Praktijk Nova",
     avatar: "https://i.pravatar.cc/44?img=14",
   },
   {
     quote:
-      "Reliable, fast, and supportive. No more downtime worries—everything just works the way it should.",
-    name: "Sofia L.",
-    role: "Marketing Director",
-    avatar: "https://i.pravatar.cc/44?img=45",
+      "“Ik was sceptisch over de prijs, maar de kwaliteit heeft alle twijfels weggenomen. Onze klanten complimenteren ons steeds vaker op hoe professioneel we online staan.”",
+    name: "Thomas Bergkamp",
+    role: "Eigenaar, Bergkamp Installaties",
+    avatar: "https://i.pravatar.cc/44?img=53",
   },
 ];
 
@@ -147,7 +147,7 @@ const TestimonialsSection = () => {
   };
 
   const lines = [
-    { text: "Klantverhalen over WebStudio Nederland", from: 78, to: 16 },
+    { text: "Klantverhalen over GOEDKOOPWEBSITE.COM ", from: 78, to: 16 },
     { text: "Echt vertrouwen.", from: 78, to: 16 },
   ];
   const totalWords = lines.reduce(

@@ -59,7 +59,13 @@ const plans = [
 const stats = [
   { countTo: 7, suffix: "", unit: "Dagen", label: "Meestal online" },
   { countTo: 100, suffix: "%", unit: "Maatwerk", label: "design" },
-  { countTo: 5000, suffix: " €+", thousands: true, unit: "Bespaar op", label: "bureaukosten" },
+  {
+    countTo: 5000,
+    suffix: " €+",
+    thousands: true,
+    unit: "Bespaar op",
+    label: "bureaukosten",
+  },
 ];
 
 const CountUp = ({ countTo, suffix, thousands }) => {
@@ -87,21 +93,30 @@ const CountUp = ({ countTo, suffix, thousands }) => {
           }, duration / steps);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, [countTo]);
 
   const display = thousands ? count.toLocaleString("nl-NL") : count;
-  return <span ref={ref}>{display}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {display}
+      {suffix}
+    </span>
+  );
 };
 
 const CheckIconWhite = () => (
-  <Image src="/images/checkwhite.svg" alt="Check mark" width={30} height={30} />
+  <span className="flex items-center justify-center w-[18px] h-[18px] rounded-full bg-white">
+    <Image src="/images/tikBlack.svg" alt="Check mark" width={12} height={12} />
+  </span>
 );
 const CheckIconBlack = () => (
-  <Image src="/images/checkBlack.svg" alt="Check mark" width={30} height={30} />
+  <span className="flex items-center justify-center w-[18px] h-[18px] rounded-full bg-[#141721]">
+    <Image src="/images/tikIcon.svg" alt="Check mark" width={12} height={12} />
+  </span>
 );
 
 const PricingSection = () => {
@@ -206,7 +221,11 @@ const PricingSection = () => {
               {stats.map((stat) => (
                 <div key={stat.label} className="flex items-center gap-2">
                   <span className="text-white text-[32px] sm:text-[40px] font-semibold">
-                    <CountUp countTo={stat.countTo} suffix={stat.suffix} thousands={stat.thousands} />
+                    <CountUp
+                      countTo={stat.countTo}
+                      suffix={stat.suffix}
+                      thousands={stat.thousands}
+                    />
                   </span>
                   <div className="flex flex-col leading-tight">
                     <span className="text-white text-[16px] sm:text-[20px]">
@@ -234,7 +253,10 @@ const PricingSection = () => {
                   past.
                 </p>
               </div>
-              <Link href="/contact" className="flex-shrink-0 bg-white text-[#0e0f1a] text-[14px] font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors w-full sm:w-auto text-center">
+              <Link
+                href="/contact"
+                className="flex-shrink-0 bg-white text-[#0e0f1a] text-[14px] font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors w-full sm:w-auto text-center"
+              >
                 Gratis aanvraag
               </Link>
             </div>

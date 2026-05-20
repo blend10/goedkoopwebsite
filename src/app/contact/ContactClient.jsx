@@ -39,7 +39,10 @@ export default function ContactClient() {
     try {
       const res = await fetch("https://formspree.io/f/mkoegdan", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(form),
       });
       if (res.ok) {
@@ -79,9 +82,9 @@ export default function ContactClient() {
             creëren
           </h1>
           <p className="text-[16px] text-[#4B4757] leading-relaxed max-w-md md:pt-4">
-            Met WebStudio Nederland ontwikkelen we moderne websites en digitale
-            oplossingen die merken versterken, vertrouwen opbouwen en groei
-            stimuleren.
+            Met <span className="uppercase">goedkoopwebsite.com</span>{" "}
+            ontwikkelen we moderne websites en digitale oplossingen die merken
+            versterken, vertrouwen opbouwen en groei stimuleren.
           </p>
         </div>
 
@@ -92,12 +95,7 @@ export default function ContactClient() {
             {/* Aanvraag */}
             <div>
               <p className="text-[13px] text-[#3C3C4399] mb-3">Aanvraag</p>
-              <a
-                href="tel:+31648291375"
-                className="block text-[18px] text-[#141721] font-medium mb-1 hover:underline"
-              >
-                +31 6 48291375
-              </a>
+
               <a
                 href="mailto:info@goedkoopwebsite.com"
                 className="text-[15px] text-[#03030F] font-semibold hover:underline"
@@ -108,26 +106,13 @@ export default function ContactClient() {
 
             <div className="border-t border-[#141721]/15" />
 
-            {/* Vind ons */}
-            <div>
-              <p className="text-[13px] text-[#3C3C4399] mb-3">Vind ons</p>
-              <p className="text-[16px] text-[#03030F] font-semibold leading-relaxed">
-                1287 Cedar Ridge Ave, Suite 300,
-                <br />
-                Annapolis Junction, MD 20701
-              </p>
-            </div>
-
-            <div className="border-t border-[#141721]/15" />
-
             {/* Plan een telefoongesprek */}
             <div>
               <p className="text-[14px] text-[#141721] mb-4">
                 Plan een telefoongesprek
               </p>
-              <a
-                href="tel:+31648291375"
-                className="flex items-center gap-4 w-full max-w-sm rounded-2xl px-4 py-4 text-left transition hover:opacity-95"
+              <div
+                className="flex items-center gap-4 w-full max-w-sm rounded-2xl px-4 py-4"
                 style={{
                   background:
                     "linear-gradient(90deg, #1a1a1f 0%, #2a1a35 40%, #6b1f8a 100%)",
@@ -151,12 +136,10 @@ export default function ContactClient() {
                   />
                 </div>
                 <div className="flex-1">
-                  <p className="text-white text-[16px] font-medium">
-                    Ethan Walker
-                  </p>
+                  <p className="text-white text-[16px] font-medium">Arian</p>
                   <p className="text-white/70 text-[15px]">Oprichter & CEO</p>
                 </div>
-              </a>
+              </div>
             </div>
 
             {/* Bullets */}
@@ -182,12 +165,26 @@ export default function ContactClient() {
             {status === "success" ? (
               <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
                 <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  <svg
+                    className="w-6 h-6 text-green-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 </div>
-                <p className="text-[16px] font-semibold text-[#141721]">Bericht verzonden!</p>
-                <p className="text-[14px] text-[#424242]">We nemen zo snel mogelijk contact met je op.</p>
+                <p className="text-[16px] font-semibold text-[#141721]">
+                  Bericht verzonden!
+                </p>
+                <p className="text-[14px] text-[#424242]">
+                  We nemen zo snel mogelijk contact met je op.
+                </p>
                 <button
                   onClick={() => setStatus("idle")}
                   className="mt-2 text-[13px] text-[#4F00ED] hover:underline"
@@ -204,7 +201,7 @@ export default function ContactClient() {
                     </label>
                     <input
                       type="text"
-                      placeholder="Jhon Doe"
+                      placeholder="Jouw naam"
                       value={form.name}
                       onChange={update("name")}
                       required
@@ -217,7 +214,7 @@ export default function ContactClient() {
                     </label>
                     <input
                       type="tel"
-                      placeholder="Telefon"
+                      placeholder="Telefoon"
                       value={form.phone}
                       onChange={update("phone")}
                       className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-[14px] text-[#141721] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4F00ED]/20 focus:border-[#4F00ED]/40"
@@ -232,7 +229,7 @@ export default function ContactClient() {
                     </label>
                     <input
                       type="text"
-                      placeholder="Firma XYZ"
+                      placeholder="Bedrijf XYZ"
                       value={form.company}
                       onChange={update("company")}
                       className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-[14px] text-[#141721] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4F00ED]/20 focus:border-[#4F00ED]/40"
@@ -244,7 +241,7 @@ export default function ContactClient() {
                     </label>
                     <input
                       type="email"
-                      placeholder="ihreadresse@mail.com"
+                      placeholder="uwadres@mail.com"
                       value={form.email}
                       onChange={update("email")}
                       required

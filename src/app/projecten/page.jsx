@@ -139,12 +139,12 @@ export default function ProjectenPage() {
           />
         </div>
         <div className="max-w-300 mx-auto w-full flex flex-col lg:flex-row lg:items-start lg:justify-between lg:gap-16 gap-6">
-          <h1 className="text-[36px] sm:text-[45px] lg:text-[55px] font-medium text-[#141721] leading-tight max-w-xl">
+          <h1 className="text-[24px] sm:text-[40px] lg:text-[55px] font-medium text-[#141721] leading-tight max-w-xl">
             Gemaakt met
             <br />
-            WebStudio Nederland
+            <span className="uppercase ">goedkoopwebsite.com</span>
           </h1>
-          <p className="text-[15px] text-[#555] leading-relaxed max-w-sm lg:pt-3">
+          <p className="text-[13px] md:text-[15px] text-[#555] leading-relaxed max-w-sm lg:pt-3">
             Wij bouwen websites die merken vooruit helpen. Sterk design, hoge
             kwaliteit en altijd maatwerk dat past bij jouw verhaal. Websites met
             karakter. Bedrijven die dachten dat het maanden zou duren, stonden

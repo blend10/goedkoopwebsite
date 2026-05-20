@@ -55,22 +55,23 @@ const Footer = () => {
         <div className="max-w-300 mx-auto w-full px-4 py-10 ">
           <div className="grid p-10 xl:p-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-[auto_1fr_auto_auto] gap-10 items-start lg:items-end">
             {/* Mockup image */}
-            <div className="relative w-70 h-70 sm:w-70 sm:h-60 shrink-0">
+            <div className="flex items-center justify-center shrink-0">
               <Image
                 src="/images/group.png"
                 alt="Website mockup"
                 width={270}
                 height={300}
-                className="absolute left-5 md:left-0 md:-top-10 lg:top-0 rounded-lg shadow-lg "
+                className="rounded-lg shadow-lg"
               />
             </div>
 
             {/* Description + social */}
             <div className="max-w-sm">
-              <p className="text-white/80 text-[15px] text-center md:text-left leading-relaxed mb-5">
-                WebStudio Nederland ontwikkelt moderne websites die bedrijven
-                professioneel presenteren, vertrouwen opbouwen en nieuwe
-                klantaanvragen genereren.
+              <p className="text-white text-[15px] text-center md:text-left leading-relaxed mb-5">
+                <span className="uppercase">goedkoopwebsite.com</span>{" "}
+                ontwikkelt moderne websites die bedrijven professioneel
+                presenteren, vertrouwen opbouwen en nieuwe klantaanvragen
+                genereren.
               </p>
               <div className="flex items-center gap-5 justify-center md:justify-start">
                 <a
@@ -194,14 +195,14 @@ const Footer = () => {
         <div className="">
           <div className="max-w-300 mx-auto w-full px-4 py-6 md:py-10 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-2 text-[16px]">
-              <span className="font-bold text-[20px] sm:text-[24px] text-white">
-                WebStudio Nederland
+              <span className="font-semibold text-[14px] md:text-[18px] uppercase sm:text-[20px] text-white">
+                goedkoopwebsite.com
               </span>
               <span className="text-[#B5B5B5]">•</span>
               <span className="text-[#B5B5B5]">Design Agency</span>
             </div>
-            <p className="text-[#FEFEFE] text-[15px]">
-              © {new Date().getFullYear()} WebStudio Nederland
+            <p className="text-[#FEFEFE] text-[12px] md:text-[15px] uppercase">
+              © {new Date().getFullYear()} goedkoopwebsite.com
             </p>
           </div>
         </div>

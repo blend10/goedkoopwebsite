@@ -35,7 +35,9 @@ export default function Header() {
     } else {
       document.body.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [mobileOpen]);
 
   const handleSectionClick = (e, sectionId) => {
@@ -67,15 +69,16 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-          scrolled
-            ? "bg-white/70 backdrop-blur-md shadow-sm"
-            : "bg-transparent"
+          scrolled ? "bg-white/70 backdrop-blur-md shadow-sm" : "bg-transparent"
         } ${mobileOpen ? "!bg-[#0e0f1a]" : ""} ${mobileOpen ? "text-white" : textColor}`}
       >
         <div className="flex items-center justify-between max-w-300 mx-auto w-full py-4 px-6 md:px-8">
           {/* Logo */}
-          <Link href="/" className={`text-[20px] md:text-[24px] font-bold shrink-0 transition-colors duration-300 ${mobileOpen ? "text-white" : ""}`}>
-            WebStudio Nederland
+          <Link
+            href="/"
+            className={`text-[18px] md:text-[20px] font-bold shrink-0 transition-colors uppercase duration-300 ${mobileOpen ? "text-white" : ""}`}
+          >
+            goedkoopwebsite.com
           </Link>
 
           {/* Desktop nav */}
@@ -97,7 +100,7 @@ export default function Header() {
                 >
                   {item.label}
                 </button>
-              )
+              ),
             )}
           </nav>
 
@@ -122,13 +125,13 @@ export default function Header() {
           >
             <div className="w-6 h-5 flex flex-col justify-between relative">
               <span
-                className={`block h-[2px] rounded-full transition-all duration-300 origin-center ${mobileOpen ? "bg-white rotate-45 translate-y-[9px]" : (dark || scrolled ? "bg-[#141721]" : "bg-white")}`}
+                className={`block h-[2px] rounded-full transition-all duration-300 origin-center ${mobileOpen ? "bg-white rotate-45 translate-y-[9px]" : dark || scrolled ? "bg-[#141721]" : "bg-white"}`}
               />
               <span
                 className={`block h-[2px] rounded-full transition-all duration-300 ${mobileOpen ? "opacity-0 scale-0" : "opacity-100"} ${dark || scrolled ? "bg-[#141721]" : "bg-white"}`}
               />
               <span
-                className={`block h-[2px] rounded-full transition-all duration-300 origin-center ${mobileOpen ? "bg-white -rotate-45 -translate-y-[9px]" : (dark || scrolled ? "bg-[#141721]" : "bg-white")}`}
+                className={`block h-[2px] rounded-full transition-all duration-300 origin-center ${mobileOpen ? "bg-white -rotate-45 -translate-y-[9px]" : dark || scrolled ? "bg-[#141721]" : "bg-white"}`}
               />
             </div>
           </button>
@@ -213,7 +216,7 @@ export default function Header() {
               }`}
               style={{ transitionDelay: mobileOpen ? "600ms" : "0ms" }}
             >
-              WebStudio Nederland
+              goedkoopwebsite.com
             </p>
           </div>
         </nav>

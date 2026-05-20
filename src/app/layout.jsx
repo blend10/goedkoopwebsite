@@ -20,30 +20,30 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   title: {
-    default: "WebStudio Nederland — Professionele Websites op Maat",
-    template: "%s | WebStudio Nederland",
+    default: "goedkoopwebsite.com — Professionele Websites op Maat",
+    template: "%s | goedkoopwebsite.com",
   },
   description:
-    "WebStudio Nederland bouwt moderne, snelle websites voor bedrijven. Maatwerk design, oplevering binnen 7 dagen, geen maandelijkse bureaukosten.",
+    "goedkoopwebsite.com bouwt moderne, snelle websites voor bedrijven. Maatwerk design, oplevering binnen 7 dagen, geen maandelijkse bureaukosten.",
   keywords: [
     "website laten maken",
     "webdesign Nederland",
     "maatwerk website",
     "goedkope website",
     "professionele website",
-    "WebStudio Nederland",
+    "goedkoopwebsite.com",
   ],
   openGraph: {
     type: "website",
     locale: "nl_NL",
-    siteName: "WebStudio Nederland",
-    title: "WebStudio Nederland — Professionele Websites op Maat",
+    siteName: "goedkoopwebsite.com",
+    title: "goedkoopwebsite.com — Professionele Websites op Maat",
     description:
       "Moderne websites voor bedrijven. Maatwerk design, oplevering binnen 7 dagen.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WebStudio Nederland — Professionele Websites op Maat",
+    title: "goedkoopwebsite.com — Professionele Websites op Maat",
     description:
       "Moderne websites voor bedrijven. Maatwerk design, oplevering binnen 7 dagen.",
   },

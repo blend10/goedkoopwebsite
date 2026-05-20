@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import ScrollReveal from "@/components/general/ScrollReveal";
 
 const projects = [
@@ -35,17 +36,20 @@ const PortfolioSection = () => {
     <section className="bg-[#f5f5f5] py-12 lg:py-16">
       <div className="max-w-300 mx-auto w-full px-6 md:px-8">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-0 mb-10">
+        <div className="flex flex-col md:flex-row sm:items-end sm:justify-between gap-4 sm:gap-0 mb-10">
           <ScrollReveal effect="fade-right">
-            <h2 className="text-[28px] sm:text-[42px] font-bold text-[#03030F] leading-tight">
-              Bouw het met <br className="hidden sm:inline" /> WebStudio
-              Nederland
+            <h2 className="text-[28px] sm:text-[50px] font-medium mb-5 md:mb-0 text-[#03030F] leading-tight">
+              Bouw het met <br className="hidden sm:inline" />{" "}
+              <span className="uppercase">goedkoopwebsite.com</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal effect="fade-left" delay={200}>
-            <button className="bg-[#141721] text-white px-6 py-3 rounded-full text-[14px] font-medium hover:bg-black/80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap sm:mt-2 w-fit">
+            <Link
+              href="/projecten"
+              className="bg-[#141721]  text-white px-6 py-3 rounded-xl text-[14px] hover:bg-black/80 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap sm:mt-2 w-fit"
+            >
               Alle werken bekijken
-            </button>
+            </Link>
           </ScrollReveal>
         </div>
 

@@ -81,7 +81,7 @@ const AboutSection = () => {
               key={i}
               src={avatar.src}
               alt="team"
-              className={`absolute ${avatar.size} ${avatar.pos} rounded-full object-cover border-4 border-white shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-lg`}
+              className={`absolute ${avatar.size} ${avatar.pos} rounded-full object-cover  shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-lg`}
               style={{
                 animation: `bubble ${avatar.dur} ease-in-out ${avatar.del} infinite`,
               }}
@@ -127,7 +127,14 @@ const AboutSection = () => {
           </ScrollReveal>
 
           <ScrollReveal effect="fade-up" delay={650}>
-            <button onClick={() => document.getElementById('prijzen')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#141721] text-white px-6 py-3 rounded-[10px] hover:bg-black/80 hover:-translate-y-0.5 hover:shadow-lg mt-6 lg:mt-10 transition-all duration-300 font-medium">
+            <button
+              onClick={() =>
+                document
+                  .getElementById("prijzen")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-[#141721] text-white px-6 py-3 rounded-[10px] hover:bg-black/80 hover:-translate-y-0.5 hover:shadow-lg mt-6 lg:mt-10 transition-all duration-300 font-medium"
+            >
               Bekijk pakketten
             </button>
           </ScrollReveal>

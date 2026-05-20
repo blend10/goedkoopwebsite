@@ -54,7 +54,7 @@ const FeaturesSection = () => {
         </h2>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* Card 1 */}
           <div className="grid-cols-2 bg-white rounded-2xl p-6 flex flex-col gap-5 justify-between">
             <div className="flex flex-row items-start justify-start gap-3">
@@ -68,7 +68,7 @@ const FeaturesSection = () => {
 
               <div>
                 <h3 className="text-[22px] sm:text-[28px] font-medium text-[#141721] leading-snug">
-                  Premium website zonder premium prijs
+                  Premium website zonder <br /> premium prijs
                 </h3>
                 <p className="text-[14px] font-medium text-[#141721] leading-relaxed mt-2">
                   Een op maat gemaakte website die professioneel oogt, snel
@@ -79,9 +79,9 @@ const FeaturesSection = () => {
             </div>
 
             {/* Comparison rows */}
-            <div className="mt-6 sm:mt-auto space-y-2">
-              <div className="flex flex-row w-full gap-4 items-center">
-                <div className="flex items-center gap-2 text-[13px] text-[#9CA3AF]">
+            <div className="mt-6 sm:mt-auto space-y-2 flex flex-row">
+              <div className="flex flex-col w-fit gap-4 mr-2 items-start shrink-0">
+                <div className="flex items-start gap-2 py-3 text-[13px] text-[#9CA3AF]">
                   <Image
                     src="/images/icon12.svg"
                     alt="Question mark"
@@ -90,15 +90,7 @@ const FeaturesSection = () => {
                   />
                   <span className="text-[#03030F] font-medium">Bureau</span>
                 </div>
-                <div className="flex items-center justify-between bg-[#F9F9F9] border border-gray-100 rounded-r-xl w-full px-4 py-3">
-                  <span className="text-[14px] font-medium text-[#141721]">
-                    tot €5.000+
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex flex-row items-center w-full gap-4">
-                <div className="flex items-center gap-2 shrink-0">
+                <div className="flex items-center gap-2 py-3 shrink-0">
                   <Image
                     src="/images/webstudio.svg"
                     alt="Check mark"
@@ -106,11 +98,19 @@ const FeaturesSection = () => {
                     height={20}
                     className="text-white"
                   />
-                  <span className="text-[13px] font-semibold text-[#03030F]">
-                    WebStudio
+                  <span className="text-[12px] uppercase text-[#03030F]">
+                    goedkoopwebsite.com
                   </span>
                 </div>
-                <div className="flex items-center bg-linear-to-r from-black to-[#8715AD] border border-gray-100 rounded-r-xl px-4 py-3 w-full">
+              </div>
+
+              <div className="flex flex-col items-stretch flex-1 sm:flex-none sm:w-fit gap-4">
+                <div className="flex items-start bg-[#F9F9F9] border border-gray-100 rounded-r-xl w-full sm:w-fit px-4 sm:px-16 py-3">
+                  <span className="text-[14px] font-medium text-[#141721]">
+                    tot €5.000+
+                  </span>
+                </div>
+                <div className="flex items-center bg-linear-to-r from-black to-[#8715AD] border border-gray-100 rounded-r-xl px-4 sm:px-8 py-3 w-full sm:w-fit">
                   <span className="text-white text-[14px] font-medium rounded-full">
                     aanzienlijk goedkoper
                   </span>
@@ -122,14 +122,15 @@ const FeaturesSection = () => {
           {/* Card 2 */}
           <div className="grid-cols-2 bg-white rounded-2xl p-6 flex flex-col sm:flex-row gap-6 overflow-hidden justify-between">
             <div className="flex flex-col gap-4 flex-1 min-w-0">
-              <h3 className="text-[22px] sm:text-[28px] font-medium text-[#03030F] leading-snug">
+              <h3 className="text-[22px] sm:text-[26px] font-medium text-[#03030F] leading-snug">
                 Eenvoudig proces tot <br className="hidden sm:inline" />
                 aan de lancering
               </h3>
               <p className="text-[14px] font-medium text-[#141721] leading-relaxed">
-                We houden het proces helder en <br className="hidden sm:inline" /> eenvoudig. Je stuurt je
-                aanvraag, kiest je <br className="hidden sm:inline" /> pakket en ontvangt je website in korte
-                tijd.
+                We houden het proces helder en{" "}
+                <br className="hidden sm:inline" /> eenvoudig. Je stuurt je
+                aanvraag, kiest je <br className="hidden sm:inline" /> pakket en
+                ontvangt je website in korte tijd.
               </p>
               <div className="mt-6 sm:mt-auto space-y-3">
                 {steps.map((step) => (
@@ -171,11 +172,13 @@ const FeaturesSection = () => {
 
               <div>
                 <h3 className="text-[22px] sm:text-[28px] font-medium text-[#03030F] leading-snug">
-                  Snel online <br className="hidden sm:inline" /> meestal binnen 7 dagen
+                  Snel online <br className="hidden sm:inline" /> meestal binnen
+                  7 dagen
                 </h3>
                 <p className="text-[13px] text-[#141721] leading-relaxed mt-3">
                   Geen lange wachttijden en geen ingewikkelde bureauprocessen.
-                  Je <br className="hidden sm:inline" /> website wordt efficiënt ontwikkeld <br className="hidden sm:inline" /> en is snel
+                  Je <br className="hidden sm:inline" /> website wordt efficiënt
+                  ontwikkeld <br className="hidden sm:inline" /> en is snel
                   klaar voor gebruik.
                 </p>
               </div>
@@ -189,12 +192,15 @@ const FeaturesSection = () => {
               />
 
               <div>
-                <h3 className="text-[22px] sm:text-[28px] font-medium text-[#03030F] leading-snug">
-                  Lancering support <br className="hidden sm:inline" /> inbegrepen
+                <h3 className="text-[22px] sm:text-[26px] font-medium text-[#03030F] leading-snug">
+                  Lancering support <br className="hidden sm:inline" />{" "}
+                  inbegrepen
                 </h3>
                 <p className="text-[13px] text-[#141721] leading-relaxed mt-3">
-                  Ook na oplevering blijven we bereikbaar Je <br className="hidden sm:inline" /> en
-                  ondersteunen we je bij kleine <br className="hidden sm:inline" /> aanpassingen of vragen.
+                  Ook na oplevering blijven we bereikbaar Je{" "}
+                  <br className="hidden sm:inline" /> en ondersteunen we je bij
+                  kleine <br className="hidden sm:inline" /> aanpassingen of
+                  vragen.
                 </p>
               </div>
             </div>
@@ -211,7 +217,8 @@ const FeaturesSection = () => {
           >
             <div className="flex flex-col gap-5 flex-1 min-w-0">
               <h3 className="text-[22px] sm:text-[28px] font-medium text-[#141721] leading-snug">
-                Alles voor een sterke <br className="hidden sm:inline" /> online aanwezigheid
+                Alles voor een sterke <br className="hidden sm:inline" /> online
+                aanwezigheid
               </h3>
               <div className="space-y-3.5">
                 {features.map((f) => (

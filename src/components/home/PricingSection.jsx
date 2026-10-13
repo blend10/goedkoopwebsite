@@ -41,7 +41,7 @@ const plans = [
   {
     name: "Premium",
     subtitle: "Voor bedrijven die willen opschalen",
-    price: "€1800",
+    price: "vanaf; €1800",
     note: "Eenmalig bedrag. Geen maandelijkse bureaukosten.",
     features: [
       "Tot 12 pagina's",

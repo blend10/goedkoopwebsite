@@ -41,7 +41,8 @@ const plans = [
   {
     name: "Premium",
     subtitle: "Voor bedrijven die willen opschalen",
-    price: "vanaf; €1800",
+    pricePrefix: "vanaf",
+    price: "€1800",
     note: "Eenmalig bedrag. Geen maandelijkse bureaukosten.",
     features: [
       "Tot 12 pagina's",
@@ -173,6 +174,11 @@ const PricingSection = () => {
                     <span
                       className={`text-[42px] font-bold leading-none ${plan.highlighted ? "text-[#141721]" : "text-white"}`}
                     >
+                      {plan.pricePrefix && (
+                        <span className="text-[16px] font-normal mr-2">
+                          {plan.pricePrefix}
+                        </span>
+                      )}
                       {plan.price}
                     </span>
                     <p

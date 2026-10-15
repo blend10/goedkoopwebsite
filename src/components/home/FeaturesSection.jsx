@@ -107,7 +107,7 @@ const FeaturesSection = () => {
               <div className="flex flex-col items-stretch flex-1 sm:flex-none sm:w-fit gap-4">
                 <div className="flex items-start bg-[#F9F9F9] border border-gray-100 rounded-r-xl w-full sm:w-fit px-4 sm:px-16 py-3">
                   <span className="text-[14px] font-medium text-[#141721]">
-                    tot €5.000+
+                    vanaf €5.000+
                   </span>
                 </div>
                 <div className="flex items-center bg-linear-to-r from-black to-[#8715AD] border border-gray-100 rounded-r-xl px-4 sm:px-8 py-3 w-full sm:w-fit">
